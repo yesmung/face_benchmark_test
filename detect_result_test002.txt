@@ -1,0 +1,844 @@
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face001.jpg
+- ssdlite Inference time(sec):0.79929
+- ssdlite Scores[0]:0.99935: (778,1708,1844,3132)
+- ssdlite Scores[1]:0.99877: (1078,350,1955,1559)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face001.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face002.jpg
+- ssdlite Inference time(sec):0.14452
+- ssdlite Scores[0]:0.99944: (624,1628,1723,3228)
+- ssdlite Scores[1]:0.99874: (980,266,1825,1427)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face002.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face003.jpg
+- ssdlite Inference time(sec):0.14090
+- ssdlite Scores[0]:0.99956: (984,289,1836,1439)
+- ssdlite Scores[1]:0.99939: (616,1635,1704,3243)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face003.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face004.jpg
+- ssdlite Inference time(sec):0.14578
+- ssdlite Scores[0]:0.99975: (1011,299,1854,1596)
+- ssdlite Scores[1]:0.99929: (547,1687,1679,3255)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face004.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face005.jpg
+- ssdlite Inference time(sec):0.13705
+- ssdlite Scores[0]:0.99999: (539,1369,1775,3080)
+- ssdlite Scores[1]:0.98480: (1062,0,1986,1215)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face005.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face006.jpg
+- ssdlite Inference time(sec):0.14081
+- ssdlite Scores[0]:0.99990: (1074,297,1860,1458)
+- ssdlite Scores[1]:0.99957: (596,1647,1707,3207)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face006.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face007.jpg
+- ssdlite Inference time(sec):0.20379
+- ssdlite Scores[0]:0.99890: (1119,902,1910,1721)
+- ssdlite Scores[1]:0.94333: (213,710,479,1103)
+- ssdlite Scores[2]:0.90358: (2389,2,2815,424)
+- GT:3
+- ssdlite detect:3
+- TP:3 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face007.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face008.jpg
+- ssdlite Inference time(sec):0.12989
+- ssdlite Scores[0]:0.99992: (927,1472,1765,2491)
+- ssdlite Scores[1]:0.93240: (2235,2534,2445,2785)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face008.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face009.jpg
+- ssdlite Inference time(sec):0.13748
+- ssdlite Scores[0]:0.99998: (908,1332,1837,2535)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face009.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face010.jpg
+- ssdlite Inference time(sec):0.14212
+- ssdlite Scores[0]:0.99987: (885,1372,1717,2278)
+- ssdlite Scores[1]:0.99714: (1622,1294,2390,2264)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face010.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face011.jpg
+- ssdlite Inference time(sec):0.14229
+- ssdlite Scores[0]:0.99997: (1326,1091,2247,2299)
+- ssdlite Scores[1]:0.99942: (3,1389,1052,2677)
+- ssdlite Scores[2]:0.99932: (1885,414,2122,735)
+- GT:3
+- ssdlite detect:3
+- TP:3 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face011.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face012.jpg
+- ssdlite Inference time(sec):0.14219
+- ssdlite Scores[0]:0.99961: (1138,563,1802,1303)
+- ssdlite Scores[1]:0.99780: (1874,641,2664,1466)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face012.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face013.jpg
+- ssdlite Inference time(sec):0.14145
+- ssdlite Scores[0]:0.99990: (1950,563,2752,1559)
+- ssdlite Scores[1]:0.99939: (788,487,1584,1436)
+- ssdlite Scores[2]:0.96855: (214,1261,390,1439)
+- ssdlite Scores[3]:0.78502: (1696,1066,1869,1252)
+- GT:5
+- ssdlite detect:4
+- TP:4 TN:0 FP:0 FN:1
+- output:./output_ssdlite_test002/face001/face013.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face014.jpg
+- ssdlite Inference time(sec):0.13993
+- ssdlite Scores[0]:0.99902: (1584,122,3264,2385)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face014.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face015.jpg
+- ssdlite Inference time(sec):0.13876
+- ssdlite Scores[0]:0.99896: (1561,0,3264,2400)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face015.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face016.jpg
+- ssdlite Inference time(sec):0.14084
+- ssdlite Scores[0]:0.99380: (442,10,2873,2444)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face016.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face017.jpg
+- ssdlite Inference time(sec):0.13750
+- ssdlite Scores[0]:0.99733: (1345,13,3226,2311)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face017.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face018.jpg
+- ssdlite Inference time(sec):0.20051
+- ssdlite Scores[0]:0.99575: (970,669,1648,1659)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face018.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face019.jpg
+- ssdlite Inference time(sec):0.19510
+- ssdlite Scores[0]:0.89372: (1375,736,1844,1340)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face019.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face020.jpg
+- ssdlite Inference time(sec):0.19497
+- ssdlite Scores[0]:0.98187: (999,382,1582,1270)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face020.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face021.jpg
+- ssdlite Inference time(sec):0.19691
+- ssdlite Scores[0]:0.99346: (1500,759,1926,1368)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face021.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face022.jpg
+- ssdlite Inference time(sec):0.19880
+- ssdlite Scores[0]:0.99880: (2487,1245,2878,1660)
+- ssdlite Scores[1]:0.99752: (2752,912,3152,1390)
+- ssdlite Scores[2]:0.99547: (2128,1364,2478,1817)
+- GT:3
+- ssdlite detect:3
+- TP:3 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face022.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face023.jpg
+- ssdlite Inference time(sec):0.19784
+- ssdlite Scores[0]:0.99721: (2076,1244,2481,1746)
+- ssdlite Scores[1]:0.92374: (2393,1069,2887,1577)
+- ssdlite Scores[2]:0.87083: (2747,688,3231,1273)
+- GT:3
+- ssdlite detect:3
+- TP:3 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face023.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face024.jpg
+- ssdlite Inference time(sec):0.19777
+- ssdlite Scores[0]:0.96790: (2256,1138,2758,1640)
+- ssdlite Scores[1]:0.85467: (2566,797,3076,1353)
+- ssdlite Scores[2]:0.83585: (1842,1153,2269,1697)
+- GT:3
+- ssdlite detect:3
+- TP:3 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face024.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face025.jpg
+- ssdlite Inference time(sec):0.20286
+- ssdlite Scores[0]:0.92827: (2263,1291,2727,1777)
+- ssdlite Scores[1]:0.86531: (1794,1220,2232,1786)
+- GT:3
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:1
+- output:./output_ssdlite_test002/face001/face025.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face026.jpg
+- ssdlite Inference time(sec):0.14131
+- ssdlite Scores[0]:0.99865: (280,885,1021,1863)
+- ssdlite Scores[1]:0.99863: (856,464,1706,1477)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face026.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face027.jpg
+- ssdlite Inference time(sec):0.14135
+- ssdlite Scores[0]:0.99810: (13,1040,1077,2682)
+- ssdlite Scores[1]:0.99434: (923,658,1745,1638)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face027.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face028.jpg
+- ssdlite Inference time(sec):0.14275
+- ssdlite Scores[0]:0.99890: (152,928,1182,2407)
+- ssdlite Scores[1]:0.97795: (1041,374,1913,1425)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face028.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face029.jpg
+- ssdlite Inference time(sec):0.20305
+- GT:0
+- ssdlite detect:0
+- TP:0 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face029.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face030.jpg
+- ssdlite Inference time(sec):0.20249
+- GT:70
+- ssdlite detect:0
+- TP:0 TN:0 FP:0 FN:70
+- output:./output_ssdlite_test002/face001/face030.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face031.jpg
+- ssdlite Inference time(sec):0.20349
+- ssdlite Scores[0]:0.99289: (1371,2070,1582,2373)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face031.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face032.jpg
+- ssdlite Inference time(sec):0.26014
+- ssdlite Scores[0]:0.92080: (1351,2097,1573,2414)
+- GT:2
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:1
+- output:./output_ssdlite_test002/face001/face032.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face033.jpg
+- ssdlite Inference time(sec):0.19791
+- ssdlite Scores[0]:0.97273: (1341,2090,1558,2400)
+- ssdlite Scores[1]:0.94882: (438,2442,678,2742)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face033.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face034.jpg
+- ssdlite Inference time(sec):0.17822
+- ssdlite Scores[0]:0.99593: (392,2450,646,2744)
+- GT:2
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:1
+- output:./output_ssdlite_test002/face001/face034.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face035.jpg
+- ssdlite Inference time(sec):0.20080
+- ssdlite Scores[0]:0.97166: (1256,2714,1397,2901)
+- ssdlite Scores[1]:0.97042: (1811,2700,1935,2854)
+- GT:1
+- ssdlite detect:2
+- TP:1 TN:0 FP:1 FN:0
+- output:./output_ssdlite_test002/face001/face035.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face036.jpg
+- ssdlite Inference time(sec):0.20434
+- ssdlite Scores[0]:0.93455: (1276,2759,1441,2978)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face036.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face037.jpg
+- ssdlite Inference time(sec):0.19791
+- ssdlite Scores[0]:0.98888: (1312,2770,1452,2973)
+- ssdlite Scores[1]:0.98088: (1613,2966,1776,3144)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face037.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face038.jpg
+- ssdlite Inference time(sec):0.19791
+- ssdlite Scores[0]:0.99079: (1351,2830,1496,3024)
+- ssdlite Scores[1]:0.94584: (1895,2817,2036,2993)
+- ssdlite Scores[2]:0.80023: (1651,3031,1802,3228)
+- GT:2
+- ssdlite detect:3
+- TP:2 TN:0 FP:1 FN:0
+- output:./output_ssdlite_test002/face001/face038.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face039.jpg
+- ssdlite Inference time(sec):0.20238
+- ssdlite Scores[0]:0.96427: (1375,2852,1517,3043)
+- ssdlite Scores[1]:0.96052: (1884,2807,2030,2991)
+- GT:2
+- ssdlite detect:2
+- TP:1 TN:0 FP:1 FN:1
+- output:./output_ssdlite_test002/face001/face039.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face040.jpg
+- ssdlite Inference time(sec):0.17271
+- ssdlite Scores[0]:0.99314: (1681,2547,1825,2744)
+- ssdlite Scores[1]:0.97013: (1332,2766,1487,2948)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face040.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face041.jpg
+- ssdlite Inference time(sec):0.18611
+- ssdlite Scores[0]:0.98608: (1681,2561,1824,2754)
+- ssdlite Scores[1]:0.94672: (1319,2746,1471,2938)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face041.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face042.jpg
+- ssdlite Inference time(sec):0.16887
+- ssdlite Scores[0]:0.99173: (1330,2828,1470,3001)
+- ssdlite Scores[1]:0.97515: (1684,2583,1821,2772)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face042.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face043.jpg
+- ssdlite Inference time(sec):0.16824
+- ssdlite Scores[0]:0.98776: (1710,2582,1837,2754)
+- ssdlite Scores[1]:0.98554: (1335,2812,1484,2979)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face043.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face044.jpg
+- ssdlite Inference time(sec):0.16514
+- ssdlite Scores[0]:0.98123: (1320,2789,1464,2968)
+- GT:2
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:1
+- output:./output_ssdlite_test002/face001/face044.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face045.jpg
+- ssdlite Inference time(sec):0.16276
+- ssdlite Scores[0]:0.93754: (1372,2733,1506,2928)
+- ssdlite Scores[1]:0.90582: (1751,2551,1888,2760)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face045.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face046.jpg
+- ssdlite Inference time(sec):0.16852
+- ssdlite Scores[0]:0.94027: (1447,2231,1629,2515)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face046.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face047.jpg
+- ssdlite Inference time(sec):0.17542
+- ssdlite Scores[0]:0.99047: (1512,2204,1688,2461)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face047.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face048.jpg
+- ssdlite Inference time(sec):0.17046
+- ssdlite Scores[0]:0.96354: (1517,2180,1697,2441)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face048.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face049.jpg
+- ssdlite Inference time(sec):0.17054
+- ssdlite Scores[0]:0.98028: (1239,1835,1472,2165)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face049.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face050.jpg
+- ssdlite Inference time(sec):0.16937
+- ssdlite Scores[0]:0.99838: (1000,1757,1240,2100)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face050.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face051.jpg
+- ssdlite Inference time(sec):0.17111
+- ssdlite Scores[0]:0.87055: (1242,2046,1444,2331)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face051.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face052.jpg
+- ssdlite Inference time(sec):0.16517
+- ssdlite Scores[0]:0.99319: (1752,2439,2057,2830)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face052.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face053.jpg
+- ssdlite Inference time(sec):0.17187
+- ssdlite Scores[0]:0.99918: (1637,2359,1935,2756)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face053.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face054.jpg
+- ssdlite Inference time(sec):0.16872
+- ssdlite Scores[0]:0.99925: (1689,2334,1996,2738)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face054.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face055.jpg
+- ssdlite Inference time(sec):0.17121
+- ssdlite Scores[0]:0.95453: (515,1901,752,2187)
+- ssdlite Scores[1]:0.91582: (1295,1606,1491,1898)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face055.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face056.jpg
+- ssdlite Inference time(sec):0.16788
+- ssdlite Scores[0]:0.97874: (483,1845,703,2126)
+- ssdlite Scores[1]:0.85804: (1234,1603,1455,1906)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face056.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face057.jpg
+- ssdlite Inference time(sec):0.16586
+- ssdlite Scores[0]:0.99049: (1258,1541,1463,1820)
+- ssdlite Scores[1]:0.86683: (523,1728,753,2026)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face057.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face058.jpg
+- ssdlite Inference time(sec):0.17024
+- ssdlite Scores[0]:0.99447: (1284,1550,1490,1835)
+- ssdlite Scores[1]:0.97529: (812,1855,997,2089)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face058.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face059.jpg
+- ssdlite Inference time(sec):0.16939
+- ssdlite Scores[0]:0.98195: (1241,1553,1455,1842)
+- ssdlite Scores[1]:0.96893: (756,1771,975,2075)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face059.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face060.jpg
+- ssdlite Inference time(sec):0.17332
+- GT:1
+- ssdlite detect:0
+- TP:0 TN:0 FP:0 FN:1
+- output:./output_ssdlite_test002/face001/face060.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face061.jpg
+- ssdlite Inference time(sec):0.17054
+- ssdlite Scores[0]:0.99721: (1000,589,1776,1527)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face061.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face062.jpg
+- ssdlite Inference time(sec):0.16835
+- ssdlite Scores[0]:0.99316: (984,704,1727,1628)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face062.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face063.jpg
+- ssdlite Inference time(sec):0.16919
+- ssdlite Scores[0]:0.97776: (920,2146,1069,2350)
+- ssdlite Scores[1]:0.76578: (1585,1968,1727,2152)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face063.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face064.jpg
+- ssdlite Inference time(sec):0.25412
+- ssdlite Scores[0]:0.90229: (3154,1368,3306,1534)
+- GT:3
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:2
+- output:./output_ssdlite_test002/face001/face064.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face065.jpg
+- ssdlite Inference time(sec):0.21469
+- ssdlite Scores[0]:0.93834: (1490,1403,1636,1580)
+- GT:2
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:1
+- output:./output_ssdlite_test002/face001/face065.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face066.jpg
+- ssdlite Inference time(sec):0.16727
+- ssdlite Scores[0]:0.99809: (566,986,861,1370)
+- ssdlite Scores[1]:0.99802: (2847,939,3128,1234)
+- ssdlite Scores[2]:0.99771: (1401,1099,1722,1509)
+- ssdlite Scores[3]:0.99399: (2145,1352,2471,1750)
+- ssdlite Scores[4]:0.91794: (1893,868,2145,1114)
+- GT:5
+- ssdlite detect:5
+- TP:5 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face066.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face067.jpg
+- ssdlite Inference time(sec):0.16817
+- GT:4
+- ssdlite detect:0
+- TP:0 TN:0 FP:0 FN:4
+- output:./output_ssdlite_test002/face001/face067.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face068.jpg
+- ssdlite Inference time(sec):0.17564
+- ssdlite Scores[0]:0.98474: (3536,992,3758,1226)
+- GT:2
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:1
+- output:./output_ssdlite_test002/face001/face068.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face069.jpg
+- ssdlite Inference time(sec):0.17231
+- ssdlite Scores[0]:0.99926: (1123,373,1633,1196)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face069.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face070.jpg
+- ssdlite Inference time(sec):0.17280
+- ssdlite Scores[0]:0.99852: (1192,339,1704,1190)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face070.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face071.jpg
+- ssdlite Inference time(sec):0.18053
+- ssdlite Scores[0]:0.99980: (890,536,1690,1787)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face071.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face072.jpg
+- ssdlite Inference time(sec):0.18096
+- GT:1
+- ssdlite detect:0
+- TP:0 TN:0 FP:0 FN:1
+- output:./output_ssdlite_test002/face001/face072.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face073.jpg
+- ssdlite Inference time(sec):0.13639
+- ssdlite Scores[0]:0.96234: (1168,1416,1614,2014)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face073.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face074.jpg
+- ssdlite Inference time(sec):0.13726
+- ssdlite Scores[0]:0.98224: (1123,1301,1564,1849)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face074.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face075.jpg
+- ssdlite Inference time(sec):0.17207
+- GT:1
+- ssdlite detect:0
+- TP:0 TN:0 FP:0 FN:1
+- output:./output_ssdlite_test002/face001/face075.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face076.jpg
+- ssdlite Inference time(sec):0.17149
+- GT:0
+- ssdlite detect:0
+- TP:0 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face076.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face077.jpg
+- ssdlite Inference time(sec):0.17178
+- ssdlite Scores[0]:0.93908: (888,2298,1588,3218)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face077.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face078.jpg
+- ssdlite Inference time(sec):0.17324
+- ssdlite Scores[0]:0.99001: (2006,1130,2220,1376)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face078.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face079.jpg
+- ssdlite Inference time(sec):0.16895
+- ssdlite Scores[0]:0.97670: (2054,782,2331,1129)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face079.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face080.jpg
+- ssdlite Inference time(sec):0.17902
+- ssdlite Scores[0]:0.98729: (1664,1712,1828,1878)
+- ssdlite Scores[1]:0.97700: (2276,1461,2421,1609)
+- ssdlite Scores[2]:0.94070: (2808,1558,2968,1725)
+- GT:3
+- ssdlite detect:3
+- TP:3 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face080.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face081.jpg
+- ssdlite Inference time(sec):0.16966
+- ssdlite Scores[0]:0.97882: (676,534,1277,1307)
+- ssdlite Scores[1]:0.94436: (1921,1274,2308,1736)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face081.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face082.jpg
+- ssdlite Inference time(sec):0.17252
+- ssdlite Scores[0]:0.99759: (1145,1235,1493,1679)
+- ssdlite Scores[1]:0.98473: (1631,1313,2098,2059)
+- ssdlite Scores[2]:0.95004: (738,1120,886,1376)
+- GT:3
+- ssdlite detect:3
+- TP:3 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face082.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face083.jpg
+- ssdlite Inference time(sec):0.17546
+- ssdlite Scores[0]:0.99463: (903,1098,1165,1511)
+- ssdlite Scores[1]:0.98332: (1686,1138,2227,1909)
+- ssdlite Scores[2]:0.93404: (176,1144,347,1424)
+- ssdlite Scores[3]:0.88818: (461,1403,648,1675)
+- GT:4
+- ssdlite detect:4
+- TP:4 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face083.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face084.jpg
+- ssdlite Inference time(sec):0.17164
+- ssdlite Scores[0]:0.99768: (780,977,1054,1413)
+- ssdlite Scores[1]:0.98565: (1645,988,2173,1766)
+- ssdlite Scores[2]:0.93768: (60,1025,242,1308)
+- ssdlite Scores[3]:0.85471: (362,1283,558,1557)
+- GT:4
+- ssdlite detect:4
+- TP:4 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face084.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face085.jpg
+- ssdlite Inference time(sec):0.17220
+- ssdlite Scores[0]:0.84464: (1379,1047,1510,1222)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face085.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face086.jpg
+- ssdlite Inference time(sec):0.16830
+- GT:1
+- ssdlite detect:0
+- TP:0 TN:0 FP:0 FN:1
+- output:./output_ssdlite_test002/face001/face086.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face087.jpg
+- ssdlite Inference time(sec):0.17097
+- ssdlite Scores[0]:0.98219: (1557,1214,1777,1463)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face087.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face088.jpg
+- ssdlite Inference time(sec):0.17332
+- ssdlite Scores[0]:0.99311: (1300,1186,1564,1569)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face088.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face089.jpg
+- ssdlite Inference time(sec):0.16962
+- ssdlite Scores[0]:0.99814: (1340,1214,1661,1648)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face089.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face090.jpg
+- ssdlite Inference time(sec):0.17248
+- ssdlite Scores[0]:0.94438: (1108,536,1506,1007)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face090.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face091.jpg
+- ssdlite Inference time(sec):0.18751
+- ssdlite Scores[0]:0.96556: (1427,1011,1712,1292)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face091.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face092.jpg
+- ssdlite Inference time(sec):0.29685
+- ssdlite Scores[0]:0.79286: (1138,453,1543,1014)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face092.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face093.jpg
+- ssdlite Inference time(sec):0.18641
+- ssdlite Scores[0]:0.98137: (1079,1409,1295,1688)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face093.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face094.jpg
+- ssdlite Inference time(sec):0.17633
+- ssdlite Scores[0]:0.76525: (1470,827,1727,1081)
+- GT:1
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face094.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face095.jpg
+- ssdlite Inference time(sec):0.18878
+- ssdlite Scores[0]:0.96504: (1013,230,1210,486)
+- GT:2
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:1
+- output:./output_ssdlite_test002/face001/face095.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face096.jpg
+- ssdlite Inference time(sec):0.17684
+- ssdlite Scores[0]:0.98351: (1836,1555,2014,1772)
+- ssdlite Scores[1]:0.78890: (2162,1800,2322,1986)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face096.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face097.jpg
+- ssdlite Inference time(sec):0.18650
+- ssdlite Scores[0]:0.99330: (2026,1822,2198,2017)
+- GT:2
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:1
+- output:./output_ssdlite_test002/face001/face097.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face098.jpg
+- ssdlite Inference time(sec):0.17155
+- ssdlite Scores[0]:0.99051: (1701,1646,1879,1871)
+- ssdlite Scores[1]:0.94523: (2002,1897,2175,2107)
+- GT:2
+- ssdlite detect:2
+- TP:2 TN:0 FP:0 FN:0
+- output:./output_ssdlite_test002/face001/face098.jpg
+----------------------------------------------------------
+/home/task1/Desktop/myungsung.kwak/project/DataShare/test002/face001/face099.jpg
+- ssdlite Inference time(sec):0.16911
+- ssdlite Scores[0]:0.98280: (2036,1629,2206,1830)
+- GT:2
+- ssdlite detect:1
+- TP:1 TN:0 FP:0 FN:1
+- output:./output_ssdlite_test002/face001/face099.jpg
+----------------------------------------------------------

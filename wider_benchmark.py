@@ -173,7 +173,7 @@ def get_args():
         type=str,
         required=True,
         help=
-        "Please choose between : opencv_haar , dlib_hog , dlib_cnn , mtcnn , mobilenet_ssd "
+        "Please choose between : opencv_haar , dlib_hog , dlib_cnn , mtcnn , mobilenet_ssd, mobilenetv2_ssdlite"
     )
     parser.add_argument(
         "--iou_threshold",
@@ -195,7 +195,7 @@ def main():
 
     # Current available method in this repo
     method_list = [
-        'opencv_haar', 'dlib_hog', 'dlib_cnn', 'mtcnn', 'mobilenet_ssd'
+        'opencv_haar', 'dlib_hog', 'dlib_cnn', 'mtcnn', 'mobilenet_ssd', 'mobilenetv2_ssdlite'
     ]
     method = args.method
 
@@ -205,11 +205,9 @@ def main():
             scaleFactor=1.3,
             minNeighbors=5,
             model_path='models/haarcascade_frontalface_default.xml')
-
     elif method == 'dlib_hog':
         face_detector = DlibHOGFaceDetector(
             nrof_upsample=0, det_threshold=-0.2)
-
     elif method == 'dlib_cnn':
         face_detector = DlibCNNFaceDetector(
             nrof_upsample=0, model_path='models/mmod_human_face_detector.dat')
@@ -221,19 +219,22 @@ def main():
         face_detector = TensoflowMobilNetSSDFaceDector(
             det_threshold=0.3,
             model_path='models/ssd/frozen_inference_graph_face.pb')
-
+    elif method == 'mobilenetv2_ssdlite':
+        face_detector = TensoflowMobilNetV2SSDLiteFaceDector(
+            det_threshold=0.3,
+            model_path='models/ssdlite/trained_ssdlite_mobilenet_v2_233505.pb')
+    
     if method not in method_list:
-        print 'Please select the available method from this list: opencv_haar , dlib_hog , dlib_cnn , mtcnn , mobilenet_ssd'
+        print ('Please select the available method from this list: opencv_haar , dlib_hog , dlib_cnn , mtcnn , mobilenet_ssd', 'mobilenetv2_ssdlite')
     else:
         data_dict = extract_and_filter_data(splits)
 
         result = evaluate(face_detector, data_dict, iou_threshold)
 
-        print 'Average IOU = %s' % (str(result['average_iou']))
-        print 'mAP = %s' % (str(result['mean_average_precision']))
-        print 'Average inference time = %s' % (
-            str(result['average_inferencing_time']))
-
+        print ('Average IOU = %s' % (str(result['average_iou'])))
+        print ('mAP = %s' % (str(result['mean_average_precision'])))
+        print ('Average inference time = %s' % (
+            str(result['average_inferencing_time'])))
 
 if __name__ == '__main__':
     main()
