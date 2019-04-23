@@ -15,14 +15,19 @@ NO_OVERLAP = 0
 
 def get_args():
     parser = argparse.ArgumentParser(
-        description=
-        "This example script will show you how to use the face detector module.",
+        description="This example script will show you how to use the face detector module.",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument(
-        "--input_image_path", "-ii", type=str, required=True, help="Path to image file"
+        "--input_image_path", "-ii",
+        type=str, 
+        required=True, 
+        help="Path to image folder. ex) folder_name/class_name/file_name.jpg --> folder_name is required."
     )
     parser.add_argument(
-        "--input_xml_path", "-ig", type=str, required=True, help="Path to xml file"
+        "--input_xml_path", "-ig", 
+        type=str, 
+        required=True, 
+        help="Path to xml folder containing the ground truth saved as PASCAL VOC format",
     )
     parser.add_argument(
         "--method",
@@ -33,11 +38,18 @@ def get_args():
         "Please choose between : opencv_haar , dlib_hog , dlib_cnn , mtcnn , mobilenet_ssd, mobilenetv2_ssdlite "
     )
     parser.add_argument(
+        "--model_type",
+        "-t",
+        type=str,
+        default="pb",
+        help= "Please choose : pb, tflite"
+    )
+    parser.add_argument(
         "--output",
         "-o",
         type=str,
         default="./output",
-        help="Please output root path")
+        help="Please output folder path. If it's not exist, it automatically creates it.")
 
     args = parser.parse_args()
     return args
@@ -49,8 +61,8 @@ def create_output_folder(input_path, output_path) :
         raise
 
     try :
-        filenames = os.listdir(input_path)
-        for filename in filenames : 
+        filename_list = os.listdir(input_path)
+        for filename in filename_list : 
             try :
                 out = os.path.join(output_path, filename)
                 print(out)
@@ -83,12 +95,13 @@ def choose_face_detector(method) :
             nrof_upsample=0, model_path='models/mmod_human_face_detector.dat')
     elif method == 'mtcnn':
         face_detector = TensorflowMTCNNFaceDetector(model_path='models/mtcnn')
+
     elif method == 'mobilenet_ssd':
-        face_detector = TensoflowMobilNetSSDFaceDector(
+        face_detector = TensoflowMobilNetSSDFaceDetector(
             det_threshold=0.75,
             model_path='models/ssd/frozen_inference_graph_face.pb')
     elif method == 'mobilenetv2_ssdlite':
-        face_detector = TensoflowMobilNetV2SSDLiteFaceDector(
+        face_detector = TensoflowMobilNetV2SSDLiteFaceDetector(
             det_threshold=0.75,
             model_path='models/ssdlite/trained_ssdlite_mobilenet_v2_414114.pb')
 
@@ -329,7 +342,7 @@ def processing_condition(gt_dict, bb_dict):
 
 def get_face(image_file_list, xml_file_list, output_path, face_detector):
     
-    log_filename = '/home/task1/Desktop/myungsung.kwak/project/FACE/face-detector-benchmark/detect_result_ssd.txt'
+    log_filename = '/home/task1/Desktop/myungsung.kwak/project/FACE/face-detector-benchmark/detect_result_tflite.txt'
     face_detector = face_detector
 
     green = (0, 255, 0)
