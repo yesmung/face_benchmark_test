@@ -20,9 +20,7 @@ class OpenCVHaarFaceDetector():
     def detect_face(self, image):
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-        faces = self.face_cascade.detectMultiScale(gray, self.scaleFactor,
-                                                   self.minNeighbors)
-
+        faces = self.face_cascade.detectMultiScale(gray, self.scaleFactor, self.minNeighbors)
         faces = [[x, y, x + w, y + h] for x, y, w, h in faces]
 
         return np.array(faces)
@@ -109,10 +107,12 @@ class TensoflowMobilNetSSDFaceDetector():
                  model_path='models/ssd/frozen_inference_graph_face.pb'):
 
         self.det_threshold = det_threshold
+        self.model_path = model_path
+        
         self.detection_graph = tf.Graph()
         with self.detection_graph.as_default():
             od_graph_def = tf.GraphDef()
-            with tf.gfile.GFile(model_path, 'rb') as fid:
+            with tf.gfile.GFile(self.model_path, 'rb') as fid:
                 serialized_graph = fid.read()
                 od_graph_def.ParseFromString(serialized_graph)
                 tf.import_graph_def(od_graph_def, name='')
@@ -129,8 +129,6 @@ class TensoflowMobilNetSSDFaceDetector():
         image_np = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         image_np_expanded = np.expand_dims(image_np, axis=0)
         
-        # print("image_np_expanded :" , image_np_expanded)
-        
         image_tensor = self.detection_graph.get_tensor_by_name(
             'image_tensor:0')
 
@@ -146,12 +144,11 @@ class TensoflowMobilNetSSDFaceDetector():
         boxes = np.squeeze(boxes)
         scores = np.squeeze(scores)
         
-        print("-----")
-        print("box shape : ", boxes.shape)
-        print("score  : ", scores)
-        print("class  : ", classes)
-        print("num_dectection : ", num_detections)
-        print("-----")
+        # print("-----")
+        # print("[TF face_detect] box shape : ", boxes.shape)
+        # print("[TF face_detect] score  : ", scores)
+        # print("[TF face_detect] class  : ", classes)
+        # print("[TF face_detect] num_dectection : ", num_detections)
 
         filtered_score_index = np.argwhere(
             scores >= self.det_threshold).flatten()
@@ -165,103 +162,74 @@ class TensoflowMobilNetSSDFaceDetector():
             int(x2 * w),
             int(y2 * h),
         ] for y1, x1, y2, x2 in selected_boxes])
-        print("- face : ", faces)
-        print("- scores : ", selected_scores)
+        # print("[TF face_detect] face : ", faces)
+        # print("[TF face_detect] scores : ", selected_scores)
+        # print("-----")
 
         return faces, selected_scores
 
-class TensoflowMobilNetV2SSDLiteFaceDetector():
+class TensorflowLiteMobileNetSSDFaceDetector():
     def __init__(self,
                  det_threshold=0.75,
-                 model_type="pb",
-                 model_path='models/ssdlite/trained_ssdlite_mobilenet_v2_414114.pb'):
-
+                 model_path='models/ssdlite/trained_ssdlite_mobilenet_v2_414114.tflite'):
+        
         self.det_threshold = det_threshold
-        self.model_type = model_type
+        self.model_path = model_path
+        self.detection_graph = tf.Graph()
         
-        if self.model_type is "pb":
-            self.detection_graph = tf.Graph()
-            
-            with self.detection_graph.as_default():
-                od_graph_def = tf.GraphDef()
-                with tf.gfile.GFile(model_path, 'rb') as fid:
-                    serialized_graph = fid.read()
-                    od_graph_def.ParseFromString(serialized_graph)
-                    tf.import_graph_def(od_graph_def, name='')
-    
-            with self.detection_graph.as_default():
-                config = tf.ConfigProto()
-                config.gpu_options.allow_growth = True
-                self.sess = tf.Session(graph=self.detection_graph, config=config)
+        self.interpreter = tf.lite.Interpreter(model_path=self.model_path)
+        self.interpreter.allocate_tensors()
         
-        elif self.model_type is "tflite":
-            self.interpreter = tf.lite.Interpreter(model_path=model_path)
-            self.interpreter.allocate_tensors()
-            self.input_details = self.interpreter.get_input_details()
-            self.output_details = self.interpreter.get_output_details()
-
+        self.input_details = self.interpreter.get_input_details()
+        self.output_details = self.interpreter.get_output_details()
+        
     def detect_face(self, image):
-
-        h, w, c = image.shape
-        boxes, scores, classes, num_detections = np.array()
-        
-        if self.model_type is "pb":
-            
-            image_np = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-            image_np_expanded = np.expand_dims(image_np, axis=0)
-            
-            image_tensor = self.detection_graph.get_tensor_by_name(
-                'image_tensor:0')
-            print("image_tensor shape : ", image_tensor.get_shape())
-    
-            boxes = self.detection_graph.get_tensor_by_name('detection_boxes:0')
-            scores = self.detection_graph.get_tensor_by_name('detection_scores:0')
-            classes = self.detection_graph.get_tensor_by_name('detection_classes:0')
-            num_detections = self.detection_graph.get_tensor_by_name('num_detections:0')
-    
-            (boxes, scores, classes, num_detections) = self.sess.run(
-                [boxes, scores, classes, num_detections],
-                feed_dict={image_tensor: image_np_expanded})
-        elif self.model_type is "tflite":
+        with self.detection_graph.as_default():
             with tf.Session() as sess:
+
+                h, w, c = image.shape
+                
                 image_np = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
                 image_np = tf.image.resize_images(image, size=[512, 512], method=tf.image.ResizeMethod.BILINEAR)
-                
+
                 resize_image = tf.image.resize_images(image_np, size=[512, 512], method=tf.image.ResizeMethod.BILINEAR)
                 resize_image = (resize_image - 128.0) / 128.0
                 resize_image = tf.expand_dims(resize_image, 0)
-
+                
                 input_data = tf.summary.image("input_data", resize_image, max_outputs=3)
                 input_data = sess.run(resize_image)
                 self.interpreter.set_tensor(self.input_details[0]['index'], input_data)
                 self.interpreter.invoke()
-
+                
                 boxes = self.interpreter.get_tensor(self.output_details[0]['index'])
                 classes = self.interpreter.get_tensor(self.output_details[1]['index'])
                 scores = self.interpreter.get_tensor(self.output_details[2]['index'])
                 num_detections = self.interpreter.get_tensor(self.output_details[3]['index'])
-        
-        print("-----")
-        print("box shape : ", boxes.shape)
-        print("score  : ", scores)
-        print("class  : ", classes)
-        print("num_dectection shape : ", num_detections.shape)
-        print("-----")
 
-        boxes = np.squeeze(boxes)
-        scores = np.squeeze(scores)
+                boxes = np.squeeze(boxes)
+                scores = np.squeeze(scores)
 
-        filtered_score_index = np.argwhere(
-            scores >= self.det_threshold).flatten()
+                # print("-----")
+                # print("[TFLite face_detect] box shape : ", boxes.shape)
+                # print("[TFLite face_detect] score  : ", scores)
+                # print("[TFLite face_detect] class  : ", classes)
+                # print("[TFLite face_detect] num_dectection : ", num_detections)
 
-        selected_boxes = boxes[filtered_score_index]
-        selected_scores = scores[filtered_score_index]
+                filtered_score_index = np.argwhere(
+                    scores >= self.det_threshold).flatten()
 
-        faces = np.array([[
-            int(x1 * w),
-            int(y1 * h),
-            int(x2 * w),
-            int(y2 * h),
-        ] for y1, x1, y2, x2 in selected_boxes])
+                selected_boxes = boxes[filtered_score_index]
+                selected_scores = scores[filtered_score_index]
 
-        return faces, selected_scores
+                faces = np.array([[
+                    int(x1 * w),
+                    int(y1 * h),
+                    int(x2 * w),
+                    int(y2 * h),
+                ] for y1, x1, y2, x2 in selected_boxes])
+                
+                # print("[TFLite face_detect] face : ", faces)
+                # print("[TFLite face_detect] scores : ", selected_scores)
+                # print("-----")
+
+                return faces, selected_scores
