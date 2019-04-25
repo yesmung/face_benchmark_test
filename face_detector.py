@@ -109,6 +109,8 @@ class TensoflowMobilNetSSDFaceDetector():
         self.det_threshold = det_threshold
         self.model_path = model_path
         
+        print("model_path : ", self.model_path)
+        
         self.detection_graph = tf.Graph()
         with self.detection_graph.as_default():
             od_graph_def = tf.GraphDef()
@@ -196,7 +198,7 @@ class TensorflowLiteMobileNetSSDFaceDetector():
                 resize_image = (resize_image - 128.0) / 128.0
                 resize_image = tf.expand_dims(resize_image, 0)
                 
-                input_data = tf.summary.image("input_data", resize_image, max_outputs=3)
+                # input_data = tf.summary.image("input_data", resize_image, max_outputs=3)
                 input_data = sess.run(resize_image)
                 self.interpreter.set_tensor(self.input_details[0]['index'], input_data)
                 self.interpreter.invoke()

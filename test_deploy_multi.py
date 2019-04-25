@@ -12,19 +12,34 @@ from GroundTruth import LabelClass
 
 IOU_THRESHOLD = 0.5
 NO_OVERLAP = 0
+count_image = 0
+total_gt = 0
+total_tp = 0
+total_tn = 0
+total_fp = 0
+total_fn = 0
+total_precision = 0
+total_recall = 0
+total_err = 0
+total_fscore = 0
+total_accuracy = 0
+total_time = 0
+
 
 def get_args():
     parser = argparse.ArgumentParser(
         description="This example script will show you how to use the face detector module.",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument(
-        "--input_image_path", "-ii",
+        "--input_image_path", 
+        "-ii",
         type=str, 
         required=True, 
         help="Path to image folder. ex) folder_name/class_name/file_name.jpg --> folder_name is required."
     )
     parser.add_argument(
-        "--input_xml_path", "-ig", 
+        "--input_xml_path", 
+        "-ig", 
         type=str, 
         required=True, 
         help="Path to xml folder containing the ground truth saved as PASCAL VOC format",
@@ -39,10 +54,17 @@ def get_args():
     )
     parser.add_argument(
         "--model_type",
-        "-t",
+        "-mt",
         type=str,
         default="pb",
-        help= "Please choose : pb, tflite"
+        help="Please choose : pb, tflite"
+    )
+    parser.add_argument(
+        "--model_path",
+        "--mp",
+        type=str,
+        default="models/ssd/frozen_inference_graph_face.pb",
+        help="Path to model path. ex) /models/ssd/frozen_inference_face.pb"
     )
     parser.add_argument(
         "--output",
@@ -75,7 +97,7 @@ def create_output_folder(input_path, output_path) :
     except PermissionError :
         pass
 
-def choose_face_detector(method) :
+def choose_face_detector(method, model_path, model_type) :
     # Current available method in this repo
     method_list = ['opencv_haar', 'dlib_hog', 'dlib_cnn', 'mtcnn', 'mobilenet_ssd', 'mobilenetv2_ssdlite']
 
@@ -95,15 +117,18 @@ def choose_face_detector(method) :
             nrof_upsample=0, model_path='models/mmod_human_face_detector.dat')
     elif method == 'mtcnn':
         face_detector = TensorflowMTCNNFaceDetector(model_path='models/mtcnn')
-
-    elif method == 'mobilenet_ssd':
-        face_detector = TensoflowMobilNetSSDFaceDetector(
-            det_threshold=0.75,
-            model_path='models/ssd/frozen_inference_graph_face.pb')
-    elif method == 'mobilenetv2_ssdlite':
-        face_detector = TensoflowMobilNetV2SSDLiteFaceDetector(
-            det_threshold=0.75,
-            model_path='models/ssdlite/trained_ssdlite_mobilenet_v2_414114.pb')
+    elif (method == 'mobilenet_ssd') or (method == 'mobilenetv2_ssdlite'):
+        if model_type == "pb":
+            print("- TensoflowMobilNetSSDFaceDetector -")
+            face_detector = TensoflowMobilNetSSDFaceDetector(
+                det_threshold=0.75,
+                model_path=model_path)
+        elif model_type == "tflite":
+            print("- TensorflowLiteMobileNetSSDFaceDetector -")
+            face_detector = TensorflowLiteMobileNetSSDFaceDetector(
+                det_threshold=0.75,
+                model_path=model_path
+            )
 
     return face_detector   
 
@@ -167,79 +192,13 @@ def get_filelist(input_path, type):
 
     return file_list
 
-def get_face_multi(file_path, output_path, _face_detector):
-    
-    base_face_detector = choose_face_detector("mobilenet_ssd")
-    face_detector = _face_detector
-    out_class_path = None
-
-    red = (0, 0, 255)
-    green = (0, 255, 0)
-    blue = (255, 0, 0)
-    white = (255, 255, 255)
-    yellow = (0, 255, 255)
-    cyan = (255, 255, 0)
-    magenta = (255, 0, 255)
-
-    fontscale = 1.0
-    thickness = 2
-    
-    with open('/home/task1/Desktop/myungsung.kwak/project/FACE/face-detector-benchmark/detect_result_test.txt', 'w', encoding='utf8') as f :
-        
-        for file_name in tqdm(file_path):
-            
-            f.write(file_name)
-            f.write("\n")
-            # Find face using face detector
-            image_data = cv2.imread(file_name)
-        
-            # Check only inference time
-            start_time = timeit.default_timer()
-            faces, scores = face_detector.detect_face(image_data)
-            end_time = timeit.default_timer()
-            
-            
-            f.write("- ssdlite Inference time(sec) : {0:.5f}".format(end_time - start_time))
-            f.write("\n")
-        
-            start_time = timeit.default_timer()
-            base_faces, base_scores = base_face_detector.detect_face(image_data)
-            end_time = timeit.default_timer()
-            f.write("- ssd Inference time(sec) : {0:.5f}".format(end_time - start_time))
-            f.write("\n")
-            
-            
-            image_data = rect_visualization(image_data, faces, scores, green, "ssdlite", f)
-            image_data = rect_visualization(image_data, base_faces, base_scores, cyan, "ssd", f)
-    
-            f.write("- ssdlite detect:" + str(len(faces)))
-            f.write("\n")
-            f.write("- ssd detect:" + str(len(base_faces)))
-            f.write("\n")
-        
-            # Save file 
-            fname, ext = os.path.splitext(file_name)
-            fname = os.path.splitext(file_name)[0].split("/")
-            class_name = fname[len(fname) - 2]
-            fname = fname[len(fname) - 1]
-        
-            save_path = os.path.join(output_path, class_name)
-            save_path = os.path.join(save_path, fname)
-            save_path = save_path + ext
-        
-            f.write("- output : " + save_path)
-            f.write("\n")
-            cv2.imwrite(save_path, image_data)
-            f.write("----------------------------------------------------------")
-            f.write("\n")
-
 def get_gt_info(filename):
     
     tree = elemTree.parse(filename)
     root = tree.getroot()
     
     bb_count = len(root.findall("object"))
-    print(">> [DEBUG] bb_count : ", bb_count)
+    # print(">> [DEBUG] bb_count : ", bb_count)
     
     bb_dict = {}
     idx = 0
@@ -288,13 +247,13 @@ def processing_condition(gt_dict, bb_dict):
 
     gt_axis_dict = gt_dict
     gt_count = len(gt_axis_dict.keys())
-    print("- gt_axis_dict : ", gt_axis_dict)
-    print("- gt_count : ", gt_count)
-    print("=================================")
+    # print("- gt_axis_dict : ", gt_axis_dict)
+    # print("- gt_count : ", gt_count)
+    # print("=================================")
     
     bb_count = len(bb_dict.keys())
     
-    print("-", bb_dict)
+    # print("-", bb_dict)
     if (gt_count is not 0) and (bb_count is 0):
         false_negative = gt_count
         return (true_positive, true_negative, false_positive, false_negative)
@@ -308,7 +267,7 @@ def processing_condition(gt_dict, bb_dict):
     no_overlap_count = 0
     true_positive_flag = False
     for key in bb_dict:
-        print(key)
+        # print(key)
         # print(bb_dict[key])
 
         for key_gt in gt_axis_dict:
@@ -342,7 +301,11 @@ def processing_condition(gt_dict, bb_dict):
 
 def get_face(image_file_list, xml_file_list, output_path, face_detector):
     
-    log_filename = '/home/task1/Desktop/myungsung.kwak/project/FACE/face-detector-benchmark/detect_result_tflite.txt'
+    global count_image, total_gt, total_tp, total_tn, total_fp, total_fn
+    global total_time
+    
+    
+    log_filename = '/home/task1/Desktop/myungsung.kwak/project/FACE/face-detector-benchmark/detect_result_ssdlite_tflite.txt'
     face_detector = face_detector
 
     green = (0, 255, 0)
@@ -368,18 +331,21 @@ def get_face(image_file_list, xml_file_list, output_path, face_detector):
             
             f.write(file_name)
             f.write("\n")
-                        
+
             # Find face using face detector
             image_data = cv2.imread(file_name)
 
             # [Start] Check only inference time
             start_time = timeit.default_timer()
-            
+
             # Detect face using method
             faces, scores = face_detector.detect_face(image_data)
-
+            
             # [End] Check only inference time
             end_time = timeit.default_timer()
+            
+            
+            total_time = (float)(total_time + (end_time - start_time))
 
             f.write("- Inference time(sec):{0:.5f}".format(end_time - start_time))
             f.write("\n")
@@ -388,12 +354,12 @@ def get_face(image_file_list, xml_file_list, output_path, face_detector):
             end_time = timeit.default_timer()
 
             image_data, bounding_box = processing_rect(image_data, faces, scores, bounding_box, green, "ssdlite", f)
-            print(">> [DEBUG] gt_dict : ", gt_dict)
-            print(">> [DEBUG] bounding_box : ", bounding_box._axis_dict)
+            # print(">> [DEBUG] gt_dict : ", gt_dict)
+            # print(">> [DEBUG] bounding_box : ", bounding_box._axis_dict)
 
             # (true_positive, true_negative, false_positive, false_negative)
             predict_condition = processing_condition(gt_dict, bounding_box._axis_dict)
-            print("[DEBUG] predict_condition : ", predict_condition)
+            # print("[DEBUG] predict_condition : ", predict_condition)
             
             f.write("- gt:" + str(gt_count))
             f.write("\n")
@@ -405,6 +371,13 @@ def get_face(image_file_list, xml_file_list, output_path, face_detector):
                     + " fp:" + str(predict_condition[2]) 
                     + " fn:" + str(predict_condition[3]))
             f.write("\n")
+
+            total_gt = total_gt + gt_count
+            total_tp = total_tp + predict_condition[0]
+            total_tn = total_tn + predict_condition[1]
+            total_fp = total_fp + predict_condition[2]
+            total_fn = total_fn + predict_condition[3]
+
             
             # Save file 
             fname, ext = os.path.splitext(file_name)
@@ -425,24 +398,41 @@ def get_face(image_file_list, xml_file_list, output_path, face_detector):
             f.write("----------------------------------------------------------")
             f.write("\n")
             
+            print(">>> [GT, TP, TN, FP, FN] : " , [total_gt, total_tp, total_tn, total_fp, total_fn])            
             print("====================================================================")
 
 def main():
+    global total_time
+    global total_gt
+    global total_precision, total_recall, total_err, total_fscore, total_accuracy
+    
     args = get_args()
 
     create_output_folder(args.input_image_path, args.output)
-    face_detector = choose_face_detector(args.method)
+    face_detector = choose_face_detector(args.method, args.model_path, args.model_type)
 
     if face_detector is not None :
-        # get_face_multi(args.input, args.output, face_detector)
         image_file_list = get_filelist(args.input_image_path, "all")
         xml_file_list = get_filelist(args.input_xml_path, "xml")
-        
-        # get_face_multi(filelist, args.output, face_detector)
         get_face(image_file_list, xml_file_list, args.output, face_detector)
-        
     else :
-        print ('Please select the available method from this list: opencv_haar , dlib_hog , dlib_cnn , mtcnn , mobilenet_ssd')
+        print ('Please select the available method from this list: opencv_haar , dlib_hog , dlib_cnn , mtcnn , mobilenet_ssd, mobilenetv2_ssdlite')
+        
+    total_accuracy = (float)((total_tp + total_tn) / (total_tp + total_tn + total_fp + total_fn))
+    total_precision = (float)(total_tp / (total_tp + total_fp))
+    total_recall = (float)(total_tp / (total_tp + total_fn))
+    total_err = (float)((total_fp + total_fn) / (total_tp + total_tn + total_fp + total_fn))
+    total_fscore = (float)((2 * total_precision * total_recall) / (total_precision + total_recall))
+    
+    print("----------- SUMMARY -----------")
+    print("[Ground truth] : ", total_gt)
+    print("[Accuracy] : ", total_accuracy)
+    print("[Error rate] : ", total_err)
+    print("[Precision] : ", total_precision)
+    print("[Recall] : ", total_recall)
+    print("[F1 Score] : ", total_fscore)
+    print(">> Total time : ", total_time)
+    print("-------------------------------")
 
 if __name__ == '__main__':
     main()
